@@ -12,7 +12,7 @@ public class Selenium3 {
 
 	public static void main(String[] args) throws Exception {
 
-		//add this comment just for checking
+		//remove the comment
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
 		WebDriver driver = new ChromeDriver(options);
