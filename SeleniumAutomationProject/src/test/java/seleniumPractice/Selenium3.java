@@ -10,7 +10,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 
 public class Selenium3 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws Exception {
 
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
@@ -26,8 +26,16 @@ public class Selenium3 {
 		List<WebElement> allBootstrap = driver.findElements(By.xpath("//ul[@class='dropdown-menu']/li/a"));
 
 		for (WebElement ele : allBootstrap) {
+			String value = ele.getText();
+
+			if (value.equals("JavaScript")) {
+				ele.click();
+				break;
+			}
 
 		}
-
+		Thread.sleep(2000);
+		driver.navigate().refresh();
+		driver.close();
 	}
 }
