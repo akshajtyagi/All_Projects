@@ -8,8 +8,8 @@ public class String4 {
 		String b = "XYZ";
 
 		a = a + b;
-		b = a.substring(0, a.length() - b.length());
-		a = a.substring(b.length());
+		b = a.substring(0, a.length() - b.length()); // ABC
+		a = a.substring(b.length()); // XYZ
 
 		System.out.println(a);
 		System.out.println(b);
