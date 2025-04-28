@@ -12,7 +12,6 @@ public class Selenium3 {
 
 	public static void main(String[] args) throws Exception {
 
-		
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--incognito");
 		WebDriver driver = new ChromeDriver(options);
@@ -31,12 +30,13 @@ public class Selenium3 {
 
 			if (value.equals("JavaScript")) {
 				ele.click();
+				driver.navigate().refresh();
 				break;
 			}
 
 		}
-		Thread.sleep(2000);
-		driver.navigate().refresh();
+		// Thread.sleep(2000);
+		// driver.navigate().refresh();
 		driver.close();
 	}
 }
